@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copywriting Portfolio | Words That Work</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(180deg, #fdfbf8 0%, #f8f4ef 50%, #fdfbf8 100%);
+            color: #2c2c2c;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 40px;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-title {
+            font-size: 72px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #8b7355 0%, #d4a574 50%, #8b7355 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #bbb;
+            animation: bounce 2s infinite;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 0 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-bottom: 100px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 200;
+            color: #d4a574;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-section {
+            padding: 0 40px 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .campaigns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .campaign-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .campaign-card.featured {
+            grid-column: span 2;
+        }
+        
+        @media (max-width: 900px) {
+            .campaign-card.featured {
+                grid-column: span 1;
+            }
+        }
+        
+        .campaign-image {
+            height: 280px;
+            background: linear-gradient(135deg, #f8f4ef 0%, #fdfbf8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            font-weight: 100;
+            color: #d4a574;
+            letter-spacing: -2px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .campaign-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(212, 165, 116, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .campaign-card:hover .campaign-image::before {
+            opacity: 1;
+        }
+        
+        /* Specific brand colors */
+        .pacsun .campaign-image {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe0b3 100%);
+            color: #ff6b35;
+        }
+        
+        .skims .campaign-image {
+            background: linear-gradient(135deg, #f5e6d8 0%, #e8ddd4 100%);
+            color: #8b7355;
+        }
+        
+        .rhode .campaign-image {
+            background: linear-gradient(135deg, #fdf8f3 0%, #fff9f5 100%);
+            color: #d4a574;
+        }
+        
+        .hommes-oro .campaign-image {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            color: #d4af37;
+        }
+        
+        .valentino .campaign-image {
+            background: linear-gradient(135deg, #ffe4e6 0%, #fff0f2 100%);
+            color: #e30045;
+        }
+        
+        .campaign-content {
+            padding: 35px;
+        }
+        
+        .campaign-category {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #d4a574;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .campaign-title {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #2c2c2c;
+            font-weight: 400;
+        }
+        
+        .campaign-description {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .campaign-metrics {
+            display: flex;
+            gap: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .metric-pill {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .metric-pill strong {
+            color: #d4a574;
+            font-weight: 600;
+        }
+        
+        /* Quick Hits Section */
+        .quick-hits-preview {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(254, 245, 237, 0.9) 100%);
+            padding: 60px;
+            border-radius: 20px;
+            margin-bottom: 80px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .quick-hits-preview:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .quick-hits-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .quick-hits-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #2c2c2c;
+        }
+        
+        .quick-hits-subtitle {
+            font-size: 16px;
+            color: #999;
+        }
+        
+        .quick-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .quick-example {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+        }
+        
+        .example-stat {
+            font-size: 28px;
+            color: #d4a574;
+            font-weight: 300;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .example-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 40px;
+            background: #2c2c2c;
+            color: white;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-title {
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-weight: 200;
+        }
+        
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+        
+        .about-specialties {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .specialty-tag {
+            padding: 10px 25px;
+            background: transparent;
+            border: 1px solid #666;
+            border-radius: 25px;
+            font-size: 14px;
+            color: #d4a574;
+            transition: all 0.3s ease;
+        }
+        
+        .specialty-tag:hover {
+            background: #d4a574;
+            color: #2c2c2c;
+            border-color: #d4a574;
+        }
+        
+        /* Contact CTA */
+        .contact-section {
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 200;
+            color: #2c2c2c;
+        }
+        
+        .contact-subtitle {
+            font-size: 20px;
+            color: #999;
+            margin-bottom: 40px;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            padding: 16px 40px;
+            background: transparent;
+            color: #8b7355;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 14px;
+            border: 2px solid #8b7355;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .contact-link:hover {
+            background: #8b7355;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .contact-link.primary {
+            background: #d4a574;
+            color: white;
+            border-color: #d4a574;
+        }
+        
+        .contact-link.primary:hover {
+            background: #c19a60;
+            border-color: #c19a60;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .footer-text {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 1px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        .campaign-card {
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: backwards;
+        }
+        
+        .campaign-card:nth-child(1) { animation-delay: 0.1s; }
+        .campaign-card:nth-child(2) { animation-delay: 0.2s; }
+        .campaign-card:nth-child(3) { animation-delay: 0.3s; }
+        .campaign-card:nth-child(4) { animation-delay: 0.4s; }
+        .campaign-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Words That Work</h1>
+            <p class="hero-subtitle">From $25 streetwear to €8,500 couture</p>
+            <p class="hero-description">Strategic copywriting that connects with Gen Z, millennials, and luxury consumers. Proven results across fashion, beauty, and lifestyle brands.</p>
+        </div>
+        <div class="scroll-indicator">Scroll to explore</div>
+    </section>
+    
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">€47M</span>
+                <span class="stat-label">Campaign Revenue</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">52%</span>
+                <span class="stat-label">Average Open Rate</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">340%</span>
+                <span class="stat-label">Sales Increase</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2.3M</span>
+                <span class="stat-label">New Customers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">73min</span>
+                <span class="stat-label">To Sellout</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="section-header">
+            <h2 class="section-title">Campaign Portfolio</h2>
+            <p class="section-subtitle">Five brands. Five voices. Five victories.</p>
+        </div>
+        
+        <div class="campaigns-grid">
+            <!-- PACSUN Campaign -->
+            <a href="pacsun-campaign.html" class="campaign-card pacsun">
+                <div class="campaign-image">PACSUN</div>
+                <div class="campaign-content">
+                    <div class="campaign-category">Gen Z Streetwear</div>
+                    <h3 class="campaign-title">Better in the Sun</h3>
+                    <p class="campaign-description">Repositioned PACSUN from "millennial mall brand" to Gen Z festival essential. Created viral TikTok series and drop culture campaigns.</p>
+                    <div class="campaign-metrics">
+                        <span class="metric-pill"><strong>340%</strong> sales increase</span>
+                        <span class="metric-pill"><strong>2.7M</strong> TikTok views</span>
+                        <span class="metric-pill"><strong>$25-50</strong> price point</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- SKIMS Campaign -->
+            <a href="skims-campaign.html" class="campaign-card skims">
+                <div class="campaign-image">SKIMS</div>
+                <div class="campaign-content">
+                    <div class="campaign-category">Inclusive Fashion</div>
+                    <h3 class="campaign-title">Fits Everybody</h3>
+                    <p class="campaign-description">Transformed "every body" from typo to tagline. Drove $3.2M launch day sales with inclusive messaging that actually meant it.</p>
+                    <div class="campaign-metrics">
+                        <span class="metric-pill"><strong>67%</strong> new customers</span>
+                        <span class="metric-pill"><strong>47%</strong> open rate</span>
+                        <span class="metric-pill"><strong>$48-200</strong> range</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Rhode Skin Campaign -->
+            <a href="rhode-campaign.html" class="campaign-card rhode">
+                <div class="campaign-image">RHODE</div>
+                <div class="campaign-content">
+                    <div class="campaign-category">Clean Beauty</div>
+                    <h3 class="campaign-title">Skin That Lives</h3>
+                    <p class="campaign-description">Positioned skincare as life support, not life changing. For skin that's been through wine nights and forgotten SPF.</p>
+                    <div class="campaign-metrics">
+                        <span class="metric-pill"><strong>$2.4M</strong> first week</span>
+                        <span class="metric-pill"><strong>73%</strong> repeat rate</span>
+                        <span class="metric-pill"><strong>52%</strong> open rate</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- HOMMES ORO Campaign -->
+            <a href="hommes-oro-campaign.html" class="campaign-card hommes-oro">
+                <div class="campaign-image">HOMMES ORO</div>
+                <div class="campaign-content">
+                    <div class="campaign-category">Men's Luxury Jewelry</div>
+                    <h3 class="campaign-title">Gold Standard</h3>
+                    <p class="campaign-description">Created "Boardroom Jewelry" category for men who speak softly and carry investment portfolios. Average order: $12K.</p>
+                    <div class="campaign-metrics">
+                        <span class="metric-pill"><strong>$1.8M</strong> Q1 revenue</span>
+                        <span class="metric-pill"><strong>67%</strong> multi-purchase</span>
+                        <span class="metric-pill"><strong>$2.4-4.8K</strong> range</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Valentino Campaign -->
+            <a href="valentino-campaign.html" class="campaign-card valentino featured">
+                <div class="campaign-image">VALENTINO</div>
+                <div class="campaign-content">
+                    <div class="campaign-category">Heritage Haute Couture</div>
+                    <h3 class="campaign-title">La Vita Rosa</h3>
+                    <p class="campaign-description">Positioned romance as rebellion in the age of minimalism. Generated €47M in 6 weeks from women who refuse to apologize for wanting more.</p>
+                    <div class="campaign-metrics">
+                        <span class="metric-pill"><strong>€47M</strong> campaign revenue</span>
+                        <span class="metric-pill"><strong>73min</strong> to sellout</span>
+                        <span class="metric-pill"><strong>847%</strong> sentiment increase</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Quick Hits Preview -->
+        <a href="quick-hits.html" class="quick-hits-preview">
+            <div class="quick-hits-header">
+                <h3 class="quick-hits-title">Quick Hits</h3>
+                <p class="quick-hits-subtitle">15 pieces of copy that changed everything</p>
+            </div>
+            <div class="quick-examples">
+                <div class="quick-example">
+                    <span class="example-stat">18% → 47%</span>
+                    <span class="example-label">Subject Line</span>
+                </div>
+                <div class="quick-example">
+                    <span class="example-stat">3% → 12%</span>
+                    <span class="example-label">CTA Button</span>
+                </div>
+                <div class="quick-example">
+                    <span class="example-stat">67% → 31%</span>
+                    <span class="example-label">Bounce Rate</span>
+                </div>
+                <div class="quick-example">
+                    <span class="example-stat">47min</span>
+                    <span class="example-label">To Sellout</span>
+                </div>
+                <div class="quick-example">
+                    <span class="example-stat">234%</span>
+                    <span class="example-label">Sign-ups</span>
+                </div>
+            </div>
+        </a>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2 class="about-title">The Range</h2>
+            <p class="about-text">
+                Strategic copywriter who speaks fluent Gen Z without using "slay" and writes luxury without mentioning "timeless elegance." 
+                From festival fashion to boardroom jewelry, I craft copy that converts across every demographic and price point.
+            </p>
+            <div class="about-specialties">
+                <span class="specialty-tag">Fashion</span>
+                <span class="specialty-tag">Beauty</span>
+                <span class="specialty-tag">Luxury</span>
+                <span class="specialty-tag">Streetwear</span>
+                <span class="specialty-tag">Email Marketing</span>
+                <span class="specialty-tag">Social Content</span>
+                <span class="specialty-tag">Brand Voice</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="contact-title">Ready to Work?</h2>
+        <p class="contact-subtitle">Let's create copy that converts</p>
+        <div class="contact-links">
+            <a href="mailto:contact@jaypaytoncopy.com" class="contact-link primary">Get in Touch</a>
+            <a href="https://www.linkedin.com/in/jaypaytoncopy" class="contact-link">LinkedIn</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">© 2025 Copywriting Portfolio. Words that work, results that matter.</p>
+    </footer>
+</body>
+</html>

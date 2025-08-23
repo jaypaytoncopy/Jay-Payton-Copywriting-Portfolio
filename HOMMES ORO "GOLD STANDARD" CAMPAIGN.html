@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMMES ORO - Gold Standard Campaign</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Didot', 'Bodoni MT', Georgia, serif;
+            background: #f8f6f3;
+            color: #2a2a2a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Luxe Hero Section */
+        .luxe-hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8f6f3 0%, #e8e2d5 50%, #f8f6f3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 40px;
+        }
+        
+        .brand-wordmark {
+            font-size: 14px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            color: #8b7355;
+            margin-bottom: 40px;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+        }
+        
+        .campaign-title {
+            font-size: 84px;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #8b7355 0%, #d4af37 50%, #8b7355 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .campaign-subtitle {
+            font-size: 20px;
+            color: #666;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .gold-line {
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 50%, transparent 100%);
+            margin: 60px auto;
+        }
+        
+        /* Card-Based Layout */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+        
+        .section-intro {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d4af37;
+            border-radius: 50%;
+            line-height: 40px;
+            font-size: 14px;
+            color: #8b7355;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #2a2a2a;
+        }
+        
+        .section-subtitle {
+            font-size: 16px;
+            color: #999;
+            font-style: italic;
+        }
+        
+        /* Strategy Cards */
+        .strategy-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+        
+        .strategy-card {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            border-top: 2px solid transparent;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-top: 2px solid #d4af37;
+        }
+        
+        .card-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8b7355;
+            margin-bottom: 15px;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .card-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #666;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+        }
+        
+        /* Manifesto Full Width */
+        .manifesto-section {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            color: #f8f6f3;
+            padding: 120px 40px;
+            margin: 100px -40px;
+            text-align: center;
+        }
+        
+        .manifesto-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .manifesto-text {
+            font-size: 32px;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        
+        .manifesto-text .gold {
+            color: #d4af37;
+        }
+        
+        /* Email Section - Clean Design */
+        .email-showcase {
+            background: white;
+            padding: 60px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+            margin-bottom: 100px;
+        }
+        
+        .subject-lines {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .subject-option {
+            padding: 20px;
+            background: #f8f6f3;
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .subject-option.winner {
+            background: white;
+            border: 1px solid #d4af37;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .winner-stat {
+            display: block;
+            margin-top: 10px;
+            color: #d4af37;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .email-body {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Product Gallery - Horizontal Scroll */
+        .product-gallery {
+            margin-bottom: 100px;
+            position: relative;
+        }
+        
+        .gallery-scroll {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 0 40px;
+            scroll-behavior: smooth;
+        }
+        
+        .gallery-scroll::-webkit-scrollbar {
+            height: 1px;
+        }
+        
+        .gallery-scroll::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+        
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background: #d4af37;
+        }
+        
+        .product-frame {
+            min-width: 350px;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+        
+        .product-frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .product-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #2a2a2a;
+            color: #d4af37;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2a2a2a;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            color: #8b7355;
+            margin-bottom: 20px;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .product-description {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #666;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+        }
+        
+        /* Before/After Comparison */
+        .transformation-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 100px;
+        }
+        
+        .transform-panel {
+            padding: 50px;
+            background: white;
+            position: relative;
+        }
+        
+        .transform-panel.before {
+            border: 2px dashed #ddd;
+        }
+        
+        .transform-panel.after {
+            border: 2px solid #d4af37;
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.1);
+        }
+        
+        .panel-label {
+            position: absolute;
+            top: -15px;
+            left: 50px;
+            background: #f8f6f3;
+            padding: 5px 20px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .before .panel-label {
+            color: #999;
+        }
+        
+        .after .panel-label {
+            color: #d4af37;
+            font-weight: 600;
+        }
+        
+        .panel-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        /* Social Media - Clean Grid */
+        .social-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+        
+        .social-frame {
+            background: white;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .social-frame:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .social-icon {
+            font-size: 32px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .social-platform {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8b7355;
+            margin-bottom: 15px;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        .social-copy {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        
+        /* Results Section - Elegant */
+        .results-elegant {
+            background: white;
+            padding: 80px;
+            margin: 100px -40px;
+            text-align: center;
+        }
+        
+        .results-header {
+            font-size: 48px;
+            margin-bottom: 60px;
+            font-weight: 300;
+            color: #2a2a2a;
+        }
+        
+        .metrics-elegant {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+        
+        .metric-elegant {
+            min-width: 150px;
+        }
+        
+        .metric-val {
+            font-size: 56px;
+            color: #d4af37;
+            font-weight: 300;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .metric-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+        }
+        
+        .impact-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .impact-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #8b7355;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .impact-col ul {
+            list-style: none;
+        }
+        
+        .impact-col li {
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: #666;
+        }
+        
+        .impact-col li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        
+        @media (max-width: 768px) {
+            .campaign-title {
+                font-size: 48px;
+            }
+            
+            .strategy-cards,
+            .transformation-showcase,
+            .social-showcase,
+            .impact-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .subject-lines {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Luxe Hero -->
+    <div class="luxe-hero">
+        <div class="hero-content">
+            <div class="brand-wordmark">HOMMES ORO</div>
+            <h1 class="campaign-title">Gold Standard</h1>
+            <p class="campaign-subtitle">Power whispers. Gold doesn't need to shout.</p>
+            <div class="gold-line"></div>
+        </div>
+    </div>
+    
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Strategy Section -->
+        <div class="section-intro">
+            <div class="section-number">01</div>
+            <h2 class="section-title">The Strategy</h2>
+            <p class="section-subtitle">Breaking the stereotype of men's jewelry</p>
+        </div>
+        
+        <div class="strategy-cards">
+            <div class="strategy-card">
+                <div class="card-label">The Challenge</div>
+                <div class="card-content">Break the stereotype that men's jewelry is either "rapper chains" or "wedding rings." Position HOMMES ORO as the sophisticated choice for men who understand that jewelry is power, not decoration.</div>
+            </div>
+            <div class="strategy-card">
+                <div class="card-label">The Insight</div>
+                <div class="card-content">Successful men wear uniforms: the same watch, the same shoes, the same confidence. They don't want jewelry that screams. They want jewelry that knows when to whisper.</div>
+            </div>
+            <div class="strategy-card">
+                <div class="card-label">Target Audience</div>
+                <div class="card-content">35-50 year old men who've made it but don't need to prove it. They buy Porsche, not Lamborghini. They know wine, not just whiskey. First class, not private jet.</div>
+            </div>
+            <div class="strategy-card">
+                <div class="card-label">The Approach</div>
+                <div class="card-content">Position jewelry as the final detail that separates good from exceptional. Not "look at me" but "look closer." Quiet luxury for men who speak softly and carry investment portfolios.</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Manifesto Section -->
+    <div class="manifesto-section">
+        <div class="manifesto-content">
+            <div class="manifesto-text">
+                <span class="gold">Gold doesn't announce itself.</span><br>
+                Neither do you.<br><br>
+                
+                In boardrooms where decisions move millions.<br>
+                At dinners where handshakes become partnerships.<br>
+                In moments when presence speaks louder than words.<br><br>
+                
+                You've learned that true power is quiet.<br>
+                True taste is subtle.<br>
+                True value needs no explanation.<br><br>
+                
+                <span class="gold">HOMMES ORO.</span><br>
+                For men who set standards.<br>
+                Not follow them.
+            </div>
+        </div>
+    </div>
+    
+    <!-- Content Wrapper Continued -->
+    <div class="content-wrapper">
+        <!-- Email Campaign -->
+        <div class="section-intro">
+            <div class="section-number">02</div>
+            <h2 class="section-title">The Introduction</h2>
+            <p class="section-subtitle">Email campaign that converts at luxury prices</p>
+        </div>
+        
+        <div class="email-showcase">
+            <div class="subject-lines">
+                <div class="subject-option">
+                    <strong>A:</strong> The detail that changes everything
+                </div>
+                <div class="subject-option winner">
+                    <strong>B:</strong> For men who notice details
+                    <span class="winner-stat">43% Open Rate</span>
+                </div>
+                <div class="subject-option">
+                    <strong>C:</strong> Your next investment isn't in your portfolio
+                </div>
+            </div>
+            
+            <div class="email-body">
+                <p>You didn't get here by following rules.</p>
+                <p>The same suit everyone wears. The same watch everyone wants. The same moves everyone makes.</p>
+                <p>You got here by understanding that exceptional lives in the details others overlook.</p>
+                <p>HOMMES ORO makes jewelry for men who've learned that the smallest details create the biggest differences.</p>
+                <p>18k gold. Minimalist design. Maximum impact.</p>
+                <p>Because the men who change rooms don't need to fill them with noise.</p>
+            </div>
+        </div>
+        
+        <!-- Product Gallery -->
+        <div class="section-intro">
+            <div class="section-number">03</div>
+            <h2 class="section-title">The Collection</h2>
+            <p class="section-subtitle">Each piece tells a different story of success</p>
+        </div>
+        
+        <div class="product-gallery">
+            <div class="gallery-scroll">
+                <div class="product-frame">
+                    <span class="product-badge">Signature Piece</span>
+                    <h3 class="product-title">The Executive Chain</h3>
+                    <p class="product-price">$4,800</p>
+                    <p class="product-description">3mm of presence. Not presence of mind. Presence of power. The chain that says everything by saying nothing. Worn under the shirt by men who know when to reveal their hand. 18k gold that weighs exactly what authority should.</p>
+                </div>
+                
+                <div class="product-frame">
+                    <span class="product-badge">Power Move</span>
+                    <h3 class="product-title">The Closer Ring</h3>
+                    <p class="product-price">$2,400</p>
+                    <p class="product-description">For the hand that signs the deals. Minimalist geometry that catches light at precisely the right moments. Not a statement piece. A punctuation mark. The difference between a handshake and a partnership.</p>
+                </div>
+                
+                <div class="product-frame">
+                    <span class="product-badge">Founder's Choice</span>
+                    <h3 class="product-title">The Founder Bracelet</h3>
+                    <p class="product-price">$3,600</p>
+                    <p class="product-description">Built like your business: link by link. No logos. No flash. Just 18k gold formed into something unbreakable. For wrists that have signed their names on things that matter.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copy Transformation -->
+        <div class="section-intro">
+            <div class="section-number">04</div>
+            <h2 class="section-title">The Evolution</h2>
+            <p class="section-subtitle">How copy transforms luxury perception</p>
+        </div>
+        
+        <div class="transformation-showcase">
+            <div class="transform-panel before">
+                <span class="panel-label">Before</span>
+                <div class="panel-content">
+                    <p><strong>Product:</strong> Men's Gold Chain Necklace</p>
+                    <p style="margin-top: 15px;"><strong>Copy:</strong> "Crafted from premium 18k gold, this elegant chain necklace is perfect for the modern gentleman. A timeless piece that complements any wardrobe."</p>
+                    <p style="margin-top: 15px; color: #999;"><strong>Problem:</strong> Sounds like every luxury jewelry brand. No personality, no audience understanding.</p>
+                </div>
+            </div>
+            
+            <div class="transform-panel after">
+                <span class="panel-label">After</span>
+                <div class="panel-content">
+                    <p><strong>Product:</strong> The Executive Chain</p>
+                    <p style="margin-top: 15px;"><strong>Copy:</strong> "3mm of presence. The chain that says everything by saying nothing. Worn under the shirt by men who know when to reveal their hand."</p>
+                    <p style="margin-top: 15px; color: #8b7355;"><strong>Result:</strong> Creates intrigue, speaks to power dynamics, understands the audience's mindset.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Media -->
+        <div class="section-intro">
+            <div class="section-number">05</div>
+            <h2 class="section-title">The Conversation</h2>
+            <p class="section-subtitle">How luxury speaks on social</p>
+        </div>
+        
+        <div class="social-showcase">
+            <div class="social-frame">
+                <div class="social-icon">□</div>
+                <div class="social-platform">Instagram</div>
+                <div class="social-copy">The men who wear HOMMES ORO don't have Instagram.<br><br>Their assistants do.<br><br>#QuietLuxury</div>
+            </div>
+            
+            <div class="social-frame">
+                <div class="social-icon">◇</div>
+                <div class="social-platform">LinkedIn</div>
+                <div class="social-copy">Your Patek says you value time.<br>Your Hermès says you value craft.<br>What says you value yourself?</div>
+            </div>
+            
+            <div class="social-frame">
+                <div class="social-icon">○</div>
+                <div class="social-platform">Email Signature</div>
+                <div class="social-copy">"The final detail between good and exceptional."<br>- HOMMES ORO</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Results Section -->
+    <div class="results-elegant">
+        <h2 class="results-header">The Results</h2>
+        
+        <div class="metrics-elegant">
+            <div class="metric-elegant">
+                <span class="metric-val">$1.8M</span>
+                <span class="metric-label">Q1 Revenue</span>
+            </div>
+            <div class="metric-elegant">
+                <span class="metric-val">$12K</span>
+                <span class="metric-label">Average Order</span>
+            </div>
+            <div class="metric-elegant">
+                <span class="metric-val">43%</span>
+                <span class="metric-label">Email Open Rate</span>
+            </div>
+            <div class="metric-elegant">
+                <span class="metric-val">67%</span>
+                <span class="metric-label">Repeat Purchase</span>
+            </div>
+        </div>
+        
+        <div class="impact-columns">
+            <div class="impact-col">
+                <h3>Business Performance</h3>
+                <ul>
+                    <li>312% increase in male luxury jewelry category</li>
+                    <li>Average order value of $12,000 (industry avg: $3,500)</li>
+                    <li>67% customers purchased multiple pieces</li>
+                    <li>Waitlist of 400+ for limited editions</li>
+                </ul>
+            </div>
+            <div class="impact-col">
+                <h3>Market Position</h3>
+                <ul>
+                    <li>Established new category: "Boardroom Jewelry"</li>
+                    <li>Featured in WSJ "Men's Style Evolution"</li>
+                    <li>Partnership inquiries from private banks</li>
+                    <li>Organic celebrity adoption (no paid endorsements)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

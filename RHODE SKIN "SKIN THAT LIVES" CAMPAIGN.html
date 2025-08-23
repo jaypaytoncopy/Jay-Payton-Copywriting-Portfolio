@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhode Skin - Skin That Lives Campaign</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #fefef9;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fff5f5 0%, #f8f5ff 100%);
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .brand-logo {
+            font-size: 42px;
+            letter-spacing: 12px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            color: #2d2d2d;
+        }
+        
+        .campaign-subtitle {
+            font-size: 18px;
+            color: #888;
+            font-weight: 300;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 80px;
+            padding: 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        }
+        
+        .label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #d4a574;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #2d2d2d;
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .strategy-block h3 {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            color: #d4a574;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        .strategy-block p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        .copy-block {
+            background: linear-gradient(135deg, #fff9f9 0%, #fffef9 100%);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid #f5e6d3;
+        }
+        
+        .copy-type {
+            font-size: 10px;
+            color: #d4a574;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .manifesto {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #2d2d2d;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .email-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .product-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .product-item {
+            background: #fffef9;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #f5e6d3;
+            transition: all 0.3s ease;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.15);
+        }
+        
+        .product-title {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #2d2d2d;
+            font-weight: 500;
+        }
+        
+        .product-price {
+            color: #d4a574;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .product-copy {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #777;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+        
+        .social-card {
+            background: white;
+            border: 1px solid #e8e8e8;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .social-platform {
+            font-size: 10px;
+            color: #d4a574;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .social-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .result-box {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #fff5f5 0%, #fffef9 100%);
+            border-radius: 15px;
+            border: 1px solid #f5e6d3;
+        }
+        
+        .result-number {
+            font-size: 42px;
+            font-weight: 200;
+            color: #d4a574;
+            margin-bottom: 8px;
+        }
+        
+        .result-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .ba-column {
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+        .before {
+            background: #f5f5f5;
+            border: 2px solid #ddd;
+        }
+        
+        .after {
+            background: linear-gradient(135deg, #fff9f9 0%, #fffef9 100%);
+            border: 2px solid #d4a574;
+        }
+        
+        .ba-label {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .before .ba-label {
+            color: #999;
+        }
+        
+        .after .ba-label {
+            color: #d4a574;
+        }
+        
+        .ba-content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: #d4a574;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 13px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        .cta-btn:hover {
+            background: #c19660;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 50px 0;
+            color: #aaa;
+            font-size: 13px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="brand-logo">RHODE</h1>
+            <p class="campaign-subtitle">Skin That Lives - The Barrier Repair Revolution</p>
+        </div>
+
+        <!-- Campaign Strategy -->
+        <div class="section">
+            <p class="label">Campaign Strategy</p>
+            <h2 class="section-title">The Brief</h2>
+            
+            <div class="strategy-grid">
+                <div class="strategy-block">
+                    <h3>The Challenge</h3>
+                    <p>Launch Rhode's Barrier Restore Cream in an oversaturated skincare market where every brand claims to "repair" skin. Stand out without making unrealistic promises.</p>
+                </div>
+                <div class="strategy-block">
+                    <h3>The Insight</h3>
+                    <p>Women don't want perfect skin. They want skin that can handle their actual life: the stress, the travel, the forgotten SPF, the wine, the late nights.</p>
+                </div>
+                <div class="strategy-block">
+                    <h3>Target Audience</h3>
+                    <p>28-40 year old women who've tried everything. They're skeptical of skincare promises but hopeful enough to try "one more thing" if it sounds honest.</p>
+                </div>
+                <div class="strategy-block">
+                    <h3>The Strategy</h3>
+                    <p>Position skincare as life support, not life changing. We're not selling transformation, we're selling resilience. Skin that can live your life with you.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Copy -->
+        <div class="section">
+            <p class="label">Campaign Manifesto</p>
+            <h2 class="section-title">Hero Copy</h2>
+            
+            <div class="copy-block">
+                <p class="copy-type">Brand Manifesto</p>
+                <div class="manifesto">
+                    Your skin has been through things.<br><br>
+                    
+                    The all-nighter before the presentation.<br>
+                    The crying in the Uber.<br>
+                    The forgot-to-wash-your-face nights.<br>
+                    The definitely-didn't-drink-enough-water weeks.<br><br>
+                    
+                    It doesn't need another 12-step routine.<br>
+                    It needs a reset button.<br><br>
+                    
+                    Rhode makes skincare for skin that lives.<br>
+                    Really lives.<br><br>
+                    
+                    Because the best skin isn't perfect.<br>
+                    It's resilient.
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Campaign -->
+        <div class="section">
+            <p class="label">Email Marketing</p>
+            <h2 class="section-title">Launch Sequence</h2>
+            
+            <div class="copy-block">
+                <p class="copy-type">Subject Lines Testing</p>
+                <p><strong>A:</strong> Your skin called. It needs backup.</p>
+                <p><strong>B:</strong> For skin that's been through it ✓ (Winner - 52% open rate)</p>
+                <p><strong>C:</strong> Permission to skip your 12-step routine</p>
+            </div>
+            
+            <div class="copy-block">
+                <p class="copy-type">Welcome Email</p>
+                <div class="email-content">
+                    <p>Let's be honest about your skincare routine.</p>
+                    <p>Sometimes it's 12 steps and jade rolling.</p>
+                    <p>Sometimes it's yesterday's mascara and hope.</p>
+                    <p>Most times? It's somewhere in between.</p>
+                    <p>That's why we made the Barrier Restore Cream. One product that does the heavy lifting when you can't. Think of it as skincare for your real life, not your Instagram life.</p>
+                    <p>No judgment. Just really good skin science.</p>
+                    <p><a href="#" class="cta-btn">Meet Your Skin's New Backup Plan</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Descriptions -->
+        <div class="section">
+            <p class="label">Product Copy</p>
+            <h2 class="section-title">Product Descriptions</h2>
+            
+            <div class="product-showcase">
+                <div class="product-item">
+                    <h3 class="product-title">Barrier Restore Cream</h3>
+                    <p class="product-price">$88</p>
+                    <p class="product-copy">The overachiever of moisturizers. Repairs your barrier while you sleep through your alarm. Ceramides do the rebuilding. Peptides do the strengthening. You do the sleeping. Works harder so you don't have to.</p>
+                </div>
+                
+                <div class="product-item">
+                    <h3 class="product-title">Glazing Milk</h3>
+                    <p class="product-price">$38</p>
+                    <p class="product-copy">The 7-second glow. Not a serum, not a moisturizer, just the perfect amount of hydration for people who count "splashing water on face" as skincare. Your skin but glazed. Like a donut, but make it chic.</p>
+                </div>
+                
+                <div class="product-item">
+                    <h3 class="product-title">Peptide Lip Treatment</h3>
+                    <p class="product-price">$18</p>
+                    <p class="product-copy">For lips that have opinions. And coffee addictions. And forget to drink water. Peptides that actually work, in a formula that stays put through your third iced latte. Your lips, but softer.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before/After Copy Transformation -->
+        <div class="section">
+            <p class="label">Copy Transformation</p>
+            <h2 class="section-title">Before vs. After Copy</h2>
+            
+            <div class="before-after">
+                <div class="ba-column before">
+                    <p class="ba-label">Before (Original)</p>
+                    <div class="ba-content">
+                        <p><strong>Product:</strong> Advanced Barrier Repair Complex</p>
+                        <p><strong>Description:</strong> A scientifically formulated moisturizer enriched with ceramides, peptides, and hyaluronic acid to restore optimal skin barrier function and provide intensive hydration for all skin types.</p>
+                        <p><strong>Result:</strong> Generic, forgettable, sounds like every other skincare brand.</p>
+                    </div>
+                </div>
+                
+                <div class="ba-column after">
+                    <p class="ba-label">After (Rewritten)</p>
+                    <div class="ba-content">
+                        <p><strong>Product:</strong> Barrier Restore Cream</p>
+                        <p><strong>Description:</strong> The overachiever of moisturizers. Repairs your barrier while you sleep through your alarm. Ceramides do the rebuilding. Peptides do the strengthening. You do the sleeping.</p>
+                        <p><strong>Result:</strong> Memorable, relatable, positions product as life solution not just skincare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="section">
+            <p class="label">Social Media</p>
+            <h2 class="section-title">Social Content</h2>
+            
+            <div class="social-grid">
+                <div class="social-card">
+                    <p class="social-platform">Instagram</p>
+                    <p class="social-content">Your skin after wine night: 😰<br>
+                    Your skin after wine night + Barrier Restore: 😌<br><br>
+                    We can't stop you from having that third glass. But we can help your skin pretend you didn't.</p>
+                </div>
+                
+                <div class="social-card">
+                    <p class="social-platform">TikTok Script</p>
+                    <p class="social-content">POV: You fell asleep in your makeup again<br><br>
+                    *shows crusty mascara*<br>
+                    *applies Barrier Restore*<br>
+                    *next morning: perfect skin*<br><br>
+                    "It's giving 'I have my life together' when you absolutely don't"</p>
+                </div>
+                
+                <div class="social-card">
+                    <p class="social-platform">Twitter/X</p>
+                    <p class="social-content">skincare routine: 
+                    <br>AM: glazing milk + SPF + denial
+                    <br>PM: barrier restore + prayer
+                    <br><br>that's it. that's the tweet.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SMS Campaign -->
+        <div class="section">
+            <p class="label">SMS Marketing</p>
+            <h2 class="section-title">Text Campaigns</h2>
+            
+            <div class="copy-block">
+                <p class="copy-type">Launch Day</p>
+                <p><strong>Rhode:</strong> Your skin's backup plan just arrived. Barrier Restore is here for all your "forgot to do skincare" nights: [link]</p>
+            </div>
+            
+            <div class="copy-block">
+                <p class="copy-type">Cart Abandonment</p>
+                <p><strong>Rhode:</strong> Your skin is literally waiting for that Barrier Restore. It told us. Complete checkout? [link]</p>
+            </div>
+        </div>
+
+        <!-- Campaign Results -->
+        <div class="section">
+            <p class="label">Campaign Performance</p>
+            <h2 class="section-title">Results</h2>
+            
+            <div class="results-container">
+                <div class="result-box">
+                    <div class="result-number">$2.4M</div>
+                    <div class="result-label">First Week Sales</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">52%</div>
+                    <div class="result-label">Email Open Rate</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">73%</div>
+                    <div class="result-label">Repeat Purchase</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-number">4.2M</div>
+                    <div class="result-label">Organic Reach</div>
+                </div>
+            </div>
+            
+            <div class="strategy-grid">
+                <div class="strategy-block">
+                    <h3>Business Impact</h3>
+                    <p>• Sold out in 72 hours (50,000 units)<br>
+                    • 73% repeat purchase rate at 60 days<br>
+                    • Highest converting email campaign in brand history<br>
+                    • Reduced CAC by 34% through organic virality</p>
+                </div>
+                <div class="strategy-block">
+                    <h3>Brand Impact</h3>
+                    <p>• Positioned Rhode as the "honest" skincare brand<br>
+                    • Created new category: "resilient skin" vs "perfect skin"<br>
+                    • Generated 847 UGC posts in first month<br>
+                    • Featured in Allure's "Brands That Get It" roundup</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Portfolio demonstration: Rhode Skin campaign showcasing clean beauty copywriting with authenticity
+        </div>
+    </div>
+</body>
+</html>

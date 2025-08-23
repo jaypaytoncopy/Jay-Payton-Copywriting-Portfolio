@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentino - La Vita Rosa Campaign</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Bodoni Moda', 'Didot', Georgia, serif;
+            background: #fff;
+            color: #1a1a1a;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section with Results First */
+        .hero-results {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #fff 50%, #ffe4e6 50%);
+            position: relative;
+        }
+        
+        .results-hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .campaign-achievement {
+            font-size: 72px;
+            color: #e30045;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+        
+        .achievement-context {
+            font-size: 24px;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .brand-signature {
+            font-size: 14px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+        }
+        
+        /* Story Layout */
+        .story-section {
+            padding: 120px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .story-sidebar {
+            position: sticky;
+            top: 40px;
+        }
+        
+        .chapter-marker {
+            font-size: 120px;
+            color: #ffe4e6;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        
+        .chapter-title {
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #e30045;
+            margin-bottom: 15px;
+        }
+        
+        .chapter-description {
+            font-size: 14px;
+            color: #999;
+            line-height: 1.6;
+        }
+        
+        .story-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .story-content p {
+            margin-bottom: 20px;
+        }
+        
+        /* Copy Showcase Different Style */
+        .copy-gallery {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .gallery-title {
+            font-size: 48px;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .gallery-subtitle {
+            font-size: 16px;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .copy-cards {
+            display: flex;
+            overflow-x: auto;
+            gap: 40px;
+            padding: 0 40px;
+            scroll-behavior: smooth;
+        }
+        
+        .copy-card {
+            min-width: 400px;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .card-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #e30045;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        
+        .card-content {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #1a1a1a;
+            font-style: italic;
+        }
+        
+        /* Manifesto Full Screen */
+        .manifesto-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 80px 40px;
+        }
+        
+        .manifesto-content {
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .manifesto-text {
+            font-size: 32px;
+            line-height: 1.6;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .manifesto-text span {
+            color: #e30045;
+        }
+        
+        /* Product Stories */
+        .product-stories {
+            padding: 100px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .products-header {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 80px;
+            color: #1a1a1a;
+            font-weight: 300;
+        }
+        
+        .product-row {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+        
+        .product-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .product-visual {
+            flex: 1;
+            height: 400px;
+            background: linear-gradient(135deg, #ffe4e6 0%, #fff0f2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200px;
+            color: #e30045;
+            opacity: 0.3;
+        }
+        
+        .product-narrative {
+            flex: 1;
+        }
+        
+        .product-name {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .product-price {
+            font-size: 16px;
+            color: #e30045;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+        
+        .product-story {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .product-romance {
+            font-size: 14px;
+            font-style: italic;
+            color: #999;
+            border-left: 3px solid #ffe4e6;
+            padding-left: 20px;
+        }
+        
+        /* Social Conversation */
+        .social-dialogue {
+            padding: 100px 40px;
+            background: #fafafa;
+        }
+        
+        .dialogue-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .dialogue-header {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1a1a1a;
+            font-weight: 300;
+        }
+        
+        .conversation-thread {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            border-left: 4px solid #e30045;
+        }
+        
+        .conversation-platform {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #e30045;
+            margin-bottom: 15px;
+        }
+        
+        .conversation-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+        
+        /* Impact Metrics Different */
+        .impact-showcase {
+            padding: 120px 40px;
+            background: linear-gradient(180deg, #fff 0%, #ffe4e6 100%);
+        }
+        
+        .impact-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 80px;
+        }
+        
+        .impact-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-weight: 300;
+        }
+        
+        .impact-statement {
+            font-size: 18px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .metrics-story {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .metric-narrative {
+            text-align: center;
+        }
+        
+        .metric-highlight {
+            font-size: 64px;
+            color: #e30045;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        
+        .metric-story {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .portfolio-footer {
+            padding: 60px 40px;
+            text-align: center;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        
+        .footer-text {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .valentino-cta {
+            display: inline-block;
+            padding: 18px 50px;
+            background: transparent;
+            color: #e30045;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 12px;
+            border: 2px solid #e30045;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            margin: 20px 10px;
+        }
+        
+        .valentino-cta:hover {
+            background: #e30045;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Start with Impact -->
+    <div class="hero-results">
+        <div class="results-hero-content">
+            <div class="campaign-achievement">€47M</div>
+            <div class="achievement-context">in 6 weeks from 5 words</div>
+            <div class="brand-signature">Valentino La Vita Rosa</div>
+        </div>
+    </div>
+
+    <!-- The Story -->
+    <div class="story-section">
+        <div class="story-grid">
+            <div class="story-sidebar">
+                <div class="chapter-marker">01</div>
+                <div class="chapter-title">The Assignment</div>
+                <div class="chapter-description">Reintroduce Valentino to a generation that thinks luxury is streetwear</div>
+            </div>
+            <div class="story-content">
+                <p>The challenge arrived wrapped in Italian heritage and 60 years of haute couture history. Valentino needed to speak to women who buy Balenciaga sneakers but have never considered Roman elegance.</p>
+                <p>The brief was simple: Make them care about craft again. Make them understand that some things are worth the wait. That fast fashion is the opposite of luxury, not the evolution of it.</p>
+                <p>The insight that changed everything: These women don't want to buy luxury. They want to become it.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="story-section">
+        <div class="story-grid">
+            <div class="story-sidebar">
+                <div class="chapter-marker">02</div>
+                <div class="chapter-title">The Strategy</div>
+                <div class="chapter-description">Romance as rebellion in the age of minimalism</div>
+            </div>
+            <div class="story-content">
+                <p>While everyone was chasing "quiet luxury," we went loud. Not with volume, but with emotion.</p>
+                <p>La Vita Rosa. Life in Pink. Not just a color, but a philosophy. The idea that choosing beauty in a cynical world is the ultimate act of rebellion.</p>
+                <p>We positioned Valentino not as fashion, but as armor for women who refuse to apologize for wanting more.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manifesto Full Screen -->
+    <div class="manifesto-section">
+        <div class="manifesto-content">
+            <div class="manifesto-text">
+                They told you <span>romance is dead.</span><br>
+                That elegance is outdated.<br>
+                That wanting beauty makes you shallow.<br><br>
+                
+                They lied.<br><br>
+                
+                Choosing silk in a world of polyester.<br>
+                Choosing craft in a world of copies.<br>
+                Choosing to feel everything<br>
+                in a world that feels nothing.<br><br>
+                
+                This is <span>La Vita Rosa.</span><br>
+                This is Valentino.
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Gallery -->
+    <div class="copy-gallery">
+        <div class="gallery-header">
+            <h2 class="gallery-title">The Language of Luxury</h2>
+            <p class="gallery-subtitle">Copy that converts at €5,000 per word</p>
+        </div>
+        
+        <div class="copy-cards">
+            <div class="copy-card">
+                <div class="card-label">Email Subject Line</div>
+                <div class="card-content">
+                    "Your invitation to feel everything"<br><br>
+                    52% open rate<br>
+                    €2.3M in 24 hours
+                </div>
+            </div>
+            
+            <div class="copy-card">
+                <div class="card-label">Hero Headline</div>
+                <div class="card-content">
+                    "For women who apologize to no one"<br><br>
+                    347% increase in dwell time<br>
+                    89% scroll depth
+                </div>
+            </div>
+            
+            <div class="copy-card">
+                <div class="card-label">Product Launch SMS</div>
+                <div class="card-content">
+                    "The dress that started 1,000 love affairs is back. Yours begins now."<br><br>
+                    Sold out in 73 minutes
+                </div>
+            </div>
+            
+            <div class="copy-card">
+                <div class="card-label">Instagram</div>
+                <div class="card-content">
+                    "Minimalism is fear dressed in beige."<br><br>
+                    4.7M impressions<br>
+                    Most saved post in brand history
+                </div>
+            </div>
+            
+            <div class="copy-card">
+                <div class="card-label">Cart Abandonment</div>
+                <div class="card-content">
+                    "Even Juliet hesitated. But look how that turned out."<br><br>
+                    41% recovery rate<br>
+                    €3.2M recovered revenue
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Stories -->
+    <div class="product-stories">
+        <h2 class="products-header">The Collection Narratives</h2>
+        
+        <div class="product-row">
+            <div class="product-visual">V</div>
+            <div class="product-narrative">
+                <h3 class="product-name">The Rosa Gown</h3>
+                <p class="product-price">€8,500</p>
+                <p class="product-story">Not a dress. A declaration. Cut from silk that took 6 months to source because some things refuse to be rushed. The gown that makes entering a room feel like opening night at La Scala.</p>
+                <p class="product-romance">"For the woman who treats Tuesday like an occasion."</p>
+            </div>
+        </div>
+        
+        <div class="product-row">
+            <div class="product-visual">V</div>
+            <div class="product-narrative">
+                <h3 class="product-name">The Rockstud Reimagined</h3>
+                <p class="product-price">€1,290</p>
+                <p class="product-story">The shoe that built an empire, rebuilt for women who build their own. Italian leather that molds to ambition. Studs that catch light like champagne bubbles. Power you can hear coming.</p>
+                <p class="product-romance">"Every empire started with a single step."</p>
+            </div>
+        </div>
+        
+        <div class="product-row">
+            <div class="product-visual">V</div>
+            <div class="product-narrative">
+                <h3 class="product-name">The Atelier Bag</h3>
+                <p class="product-price">€3,200</p>
+                <p class="product-story">Handmade by artisans who've been with Valentino longer than you've been alive. Carries secrets better than champagne. The bag that knows the difference between arriving and making an entrance.</p>
+                <p class="product-romance">"For everything you'll never tell."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Dialogue -->
+    <div class="social-dialogue">
+        <div class="dialogue-container">
+            <h2 class="dialogue-header">The Cultural Conversation</h2>
+            
+            <div class="conversation-thread">
+                <div class="conversation-platform">Twitter/X</div>
+                <div class="conversation-text">
+                    Minimalism had a good run. But some of us were born for maximalism. For feeling everything. For roses at midnight and silk at noon. La Vita Rosa.
+                </div>
+            </div>
+            
+            <div class="conversation-thread">
+                <div class="conversation-platform">TikTok Script</div>
+                <div class="conversation-text">
+                    "POV: You're done pretending beige is a personality"<br>
+                    *transforms from minimalist to Valentino Rosa*<br>
+                    "Romance isn't dead. It was just waiting for you to wake up."
+                </div>
+            </div>
+            
+            <div class="conversation-thread">
+                <div class="conversation-platform">Email Signature Campaign</div>
+                <div class="conversation-text">
+                    Week 1: "Choose beauty. Choose rebellion."<br>
+                    Week 2: "Romance is not a trend. It's a decision."<br>
+                    Week 3: "They'll stare. Let them."<br>
+                    Week 4: "La Vita Rosa. Now you know."
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impact Showcase -->
+    <div class="impact-showcase">
+        <div class="impact-intro">
+            <h2 class="impact-title">The Rosa Revolution</h2>
+            <p class="impact-statement">When luxury remembers how to make women dream</p>
+        </div>
+        
+        <div class="metrics-story">
+            <div class="metric-narrative">
+                <div class="metric-highlight">€47M</div>
+                <div class="metric-story">Six week campaign revenue. The highest in Valentino's digital history. Proof that romance sells better than minimalism ever could.</div>
+            </div>
+            
+            <div class="metric-narrative">
+                <div class="metric-highlight">73min</div>
+                <div class="metric-story">Complete sellout time for limited Rosa collection. 5,000 pieces. 73 minutes. No discounts. No influencers. Just desire.</div>
+            </div>
+            
+            <div class="metric-narrative">
+                <div class="metric-highlight">2.3M</div>
+                <div class="metric-story">New customers acquired. Women who'd never considered Valentino suddenly couldn't imagine their closets without it.</div>
+            </div>
+            
+            <div class="metric-narrative">
+                <div class="metric-highlight">847%</div>
+                <div class="metric-story">Increase in social sentiment. From "outdated luxury" to "the only brand that gets us." Cultural relevance: priceless.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-footer">
+        <p class="footer-text">Valentino La Vita Rosa Campaign / Portfolio Showcase / Luxury Copywriting at its Finest</p>
+    </div>
+</body>
+</html>
