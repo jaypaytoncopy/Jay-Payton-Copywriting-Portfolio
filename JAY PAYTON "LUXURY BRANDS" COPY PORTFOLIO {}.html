@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Payton - Complete Copywriting Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2c2c2c;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Fixed Navigation */
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 40px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #666;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #d4a574;
+            border-bottom: 2px solid #d4a574;
+        }
+        
+        /* SECTION 1: MASTER LANDING */
+        .landing-section {
+            background: linear-gradient(180deg, #fdfbf8 0%, #f8f4ef 50%, #fdfbf8 100%);
+            padding-top: 80px;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .hero-title {
+            font-size: 72px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #8b7355 0%, #d4a574 50%, #8b7355 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+        
+        .stats-bar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 0 40px 100px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 200;
+            color: #d4a574;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+        }
+        
+        /* Campaign Portfolio Section */
+        .campaign-portfolio {
+            padding: 100px 40px;
+            background: white;
+            text-align: center;
+        }
+        
+        .campaign-portfolio h2 {
+            font-size: 48px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+        }
+        
+        .campaign-portfolio p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 60px;
+        }
+        
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .brand-card {
+            padding: 30px;
+            background: #faf9f7;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .brand-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .brand-card p {
+            font-size: 14px;
+            color: #888;
+            margin: 0;
+        }
+        
+        /* SECTION 2: PACSUN COMPLETE */
+        .pacsun-section {
+            background: #faf9f7;
+            padding: 100px 0;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(180deg, #f4f1ed 0%, #faf9f7 100%);
+            margin-bottom: 60px;
+        }
+        
+        .brand-name {
+            font-size: 48px;
+            letter-spacing: 8px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .campaign-title {
+            font-size: 24px;
+            color: #666;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .section {
+            margin-bottom: 80px;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        
+        .section-header {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .brief-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .brief-item h3 {
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .brief-item p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .copy-sample {
+            background: #faf9f7;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .copy-label {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .hero-copy {
+            font-size: 28px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .body-copy {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .product-card {
+            background: #faf9f7;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        
+        .product-name {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        
+        .product-price {
+            color: #999;
+            margin-bottom: 15px;
+        }
+        
+        .product-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .social-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .social-post {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .platform {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .metric {
+            padding: 20px;
+            background: #faf9f7;
+            border-radius: 8px;
+        }
+        
+        .metric-number {
+            font-size: 36px;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 14px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+        
+        /* Quick Hits Section Styles */
+        .hit-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .hit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hit-number {
+            font-size: 10px;
+            color: #c9a961;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .hit-type {
+            font-size: 12px;
+            color: #8b7e74;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .before-after {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .version {
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .before {
+            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
+            color: #999;
+            position: relative;
+        }
+        
+        .before::before {
+            content: "BEFORE";
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 9px;
+            color: #ccc;
+            letter-spacing: 1px;
+        }
+        
+        .after {
+            background: linear-gradient(135deg, #fff9f4 0%, #fef5ed 100%);
+            color: #3a3a3a;
+            position: relative;
+            font-weight: 500;
+        }
+        
+        .after::before {
+            content: "AFTER";
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 9px;
+            color: #c9a961;
+            letter-spacing: 1px;
+        }
+        
+        .metric-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #c9a961 0%, #d4af37 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        
+        /* Contact Button Hover Effects */
+        .contact-btn-primary {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #d4a574;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 14px;
+            border: 2px solid #d4a574;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .contact-btn-primary:hover {
+            background: white;
+            color: #d4a574;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+        }
+        
+        .contact-btn-secondary {
+            display: inline-block;
+            padding: 16px 40px;
+            background: transparent;
+            color: #d4a574;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 14px;
+            border: 2px solid #d4a574;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .contact-btn-secondary:hover {
+            background: #d4a574;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+        }
+        
+        /* Copy Transformation Styles */
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .transformation-item {
+            padding: 25px;
+            background: #faf9f7;
+            border-radius: 8px;
+        }
+        
+        .transformation-item h4 {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 48px;
+            }
+            
+            .brief-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .transformation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="fixed-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#pacsun" class="nav-link">PACSUN</a>
+        <a href="#skims" class="nav-link">SKIMS</a>
+        <a href="#rhode" class="nav-link">Rhode</a>
+        <a href="#hommes" class="nav-link">Hommes Oro</a>
+        <a href="#valentino" class="nav-link">Valentino</a>
+        <a href="#quickhits" class="nav-link">Quick Hits</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    
+    <!-- SECTION 1: MASTER LANDING -->
+    <section id="home" class="landing-section">
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Words That Work</h1>
+                <p class="hero-subtitle">From $25 streetwear to $12,000 haute couture</p>
+                <p class="hero-description">Strategic copywriting that connects with Gen Z, millennials, and luxury consumers. Proven results across fashion, beauty, and lifestyle brands.</p>
+            </div>
+        </div>
+        
+        <div class="stats-bar">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">$47M</span>
+                    <span class="stat-label">Campaign Revenue</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">52%</span>
+                    <span class="stat-label">Average Open Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">340%</span>
+                    <span class="stat-label">Sales Increase</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2.3M</span>
+                    <span class="stat-label">New Customers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">73min</span>
+                    <span class="stat-label">To Sellout</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Campaign Portfolio Section -->
+        <div class="campaign-portfolio">
+            <h2>Campaign Portfolio</h2>
+            <p>Five brands. Five voices. Five victories.</p>
+            <div class="brand-grid">
+                <div class="brand-card">
+                    <h3>PACSUN</h3>
+                    <p>Gen Z festival culture</p>
+                </div>
+                <div class="brand-card">
+                    <h3>SKIMS</h3>
+                    <p>Inclusive shapewear</p>
+                </div>
+                <div class="brand-card">
+                    <h3>RHODE</h3>
+                    <p>Effortless skincare</p>
+                </div>
+                <div class="brand-card">
+                    <h3>HOMMES ORO</h3>
+                    <p>Quiet luxury jewelry</p>
+                </div>
+                <div class="brand-card">
+                    <h3>VALENTINO</h3>
+                    <p>Roman haute couture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 2: PACSUN COMPLETE -->
+    <section id="pacsun" class="pacsun-section">
+        <div class="container">
+            <div class="header">
+                <h1 class="brand-name">PACSUN</h1>
+                <p class="campaign-title">Summer Drop "Better in the Sun" Campaign</p>
+            </div>
+
+            <!-- Project Brief -->
+            <div class="section">
+                <p class="section-header">Project Brief</p>
+                <h2 class="section-title">Campaign Strategy</h2>
+                
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <h3>Background</h3>
+                        <p>PACSUN needed to reclaim relevance during festival season after losing market share to online-only fast fashion competitors. Gen Z perceived PACSUN as "millennial mall brand."</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Objective</h3>
+                        <p>Drive awareness and sales for summer collection, emphasizing festival season, beach culture, and streetwear essentials. Reposition brand for Gen Z consumers aged 16-24.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Target Audience</h3>
+                        <p>Gen Z consumers (16-24), focus on authentic self-expression and community. Festival-goers who fear showing up in the same outfit as someone else.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Key Insight</h3>
+                        <p>Gen Z doesn't just want festival clothes, they want festival stories. 67% said their biggest fear was showing up in the same outfit as someone else.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Campaign -->
+            <div class="section">
+                <p class="section-header">Email Marketing</p>
+                <h2 class="section-title">Launch Email Sequence</h2>
+                
+                <div class="copy-sample">
+                    <p class="copy-label">Subject Line Options</p>
+                    <p><strong>A:</strong> summer just hit different 🌊</p>
+                    <p><strong>B:</strong> New drops. Zero chill. All heat. (Winner - 47% Open Rate)</p>
+                    <p><strong>C:</strong> Your festival fit? Secured ✓</p>
+                </div>
+                
+                <div class="copy-sample">
+                    <p class="copy-label">Email Body</p>
+                    <div class="body-copy">
+                        <p>This is it. The pieces everyone's gonna ask about. The fits that hit different when golden hour hits. Summer 2024 just entered the chat.</p>
+                        
+                        <p><strong>Festival Ready:</strong> Main character energy only. Cargo pants that actually go hard. Crops that survive the pit. Graphics that start conversations.</p>
+                        
+                        <p><strong>Beach State of Mind:</strong> Board shorts that transition from waves to warehouse parties. Bikinis built for actual movement.</p>
+                        
+                        <p><strong>Street Essentials:</strong> The basics that aren't basic. Oversized tees with graphics that go crazy. Baggy jeans that sit just right.</p>
+                        
+                        <p><a href="#" class="cta-button">SHOP THE DROP</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Descriptions -->
+            <div class="section">
+                <p class="section-header">Product Copy</p>
+                <h2 class="section-title">Product Descriptions</h2>
+                
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h3 class="product-name">Oversized Vintage Wash Tee</h3>
+                        <p class="product-price">$24.95</p>
+                        <p class="product-description">This is the one. The tee that looks like you thrifted it from the coolest vintage store that doesn't actually exist. We spent months perfecting the wash to get that lived-in feel from day one. Made from cotton that gets softer every time you wash it.</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Low Rise Baggy Cargo Pants</h3>
+                        <p class="product-price">$49.95</p>
+                        <p class="product-description">Remember when your feed was nothing but these pants for like three weeks straight? Yeah, these are those. Sitting low on the hips with the perfect amount of baggy through the leg. The cargo pockets aren't just for show.</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Mesh Festival Top</h3>
+                        <p class="product-price">$29.95</p>
+                        <p class="product-description">For when you want to be seen but not too seen. The mesh that actually survives the festival. Pair with literally anything and watch your fit go viral.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="section">
+                <p class="section-header">Social Media</p>
+                <h2 class="section-title">Social Copy Examples</h2>
+                
+                <div class="social-examples">
+                    <div class="social-post">
+                        <p class="platform">Instagram Feed</p>
+                        <p>that feeling when the fit is so good you accidentally become the main character 🎬</p>
+                        <p style="color: #999; margin-top: 10px;">new drops just hit. link in bio before your size sells out.</p>
+                    </div>
+                    
+                    <div class="social-post">
+                        <p class="platform">TikTok Script</p>
+                        <p>POV: You're about to see the most insane summer drop</p>
+                        <p style="margin-top: 10px;">[Shows progression of fits]</p>
+                        <p>"The cargos everyone's been waiting for"</p>
+                    </div>
+                    
+                    <div class="social-post">
+                        <p class="platform">Instagram Stories</p>
+                        <p>Story 1: "summer lineup loading..."</p>
+                        <p>Story 2: "choose your fighter"</p>
+                        <p>Story 3: "cop or drop?" [Poll]</p>
+                    </div>
+                    
+                    <div class="social-post">
+                        <p class="platform">SMS Campaign</p>
+                        <p>BREAKING: Summer drop is live rn. Festival fits, beach essentials, graphics that go crazy. You know what to do 🔥</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Results -->
+            <div class="section">
+                <p class="section-header">Campaign Results</p>
+                <h2 class="section-title">The Impact</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-number">+340%</div>
+                        <div class="metric-label">Festival Sales</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">2.7M</div>
+                        <div class="metric-label">TikTok Views</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">47%</div>
+                        <div class="metric-label">Email Open Rate</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">23%</div>
+                        <div class="metric-label">New Customers</div>
+                    </div>
+                </div>
+                
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <h3>Business Impact</h3>
+                        <p>• 340% increase in festival category sales YoY<br>
+                        • 2.7M views on TikTok content (89% organic)<br>
+                        • 47% conversion rate on limited festival drops<br>
+                        • 23% new customer acquisition during campaign</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Cultural Impact</h3>
+                        <p>• Featured in 3 major "Festival Fashion" roundups<br>
+                        • #PacsunFestival generated 18M impressions<br>
+                        • 67 TikTok recreations of our "Outfit Replay" format<br>
+                        • Became #3 most-searched festival fashion brand</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 3: SKIMS COMPLETE -->
+    <section id="skims" style="background: #f7f4f1; padding: 100px 0;">
+        <div class="container">
+            <div style="height: 60vh; display: flex; margin-bottom: 80px;">
+                <div style="width: 40%; background: #e8ddd4; display: flex; align-items: center; justify-content: center;">
+                    <h1 style="writing-mode: vertical-rl; text-orientation: mixed; font-size: 120px; letter-spacing: 20px; font-weight: 100;">SKIMS</h1>
+                </div>
+                <div style="width: 60%; background: #fff; display: flex; align-items: center; padding: 0 60px;">
+                    <div>
+                        <h2 style="font-size: 48px; margin-bottom: 30px; font-weight: 300;">Fits Everybody Campaign</h2>
+                        <p style="font-size: 18px; color: #666;">SKIMS needed to reinforce its position as the inclusive shapewear brand while expanding into loungewear.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Brief -->
+            <div class="section">
+                <p class="section-header">Campaign Brief</p>
+                <h2 class="section-title">The Challenge</h2>
+                
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <h3>Background</h3>
+                        <p>SKIMS needed to reinforce its position as the inclusive shapewear brand while expanding into loungewear. The challenge: communicate that "Fits Everybody" isn't just a tagline, it's a promise.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Objective</h3>
+                        <p>Drive 40% growth in new customer acquisition while maintaining brand premiumness. Reach sizes XXS-5X demographics authentically without tokenism.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Target Audience</h3>
+                        <p>Women 25-45 who have felt excluded by traditional shapewear brands. They want solutions, not shame. Comfort, not compromise.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Key Insight</h3>
+                        <p>"Every body" is grammatically incorrect but emotionally perfect. It acknowledges bodies as individual, not universal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifesto -->
+            <div class="section">
+                <p class="section-header">Hero Campaign Copy</p>
+                <h2 class="section-title">Manifesto</h2>
+                
+                <div class="copy-sample">
+                    <div class="hero-copy">
+                        Your body has taken you this far.<br>
+                        Every curve tells a story.<br>
+                        Every edge has earned its place.<br>
+                        <br>
+                        We don't make shapewear to hide you.<br>
+                        We make it to hold you.<br>
+                        <br>
+                        Fits Everybody.<br>
+                        Because every body fits.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Campaign -->
+            <div class="section">
+                <p class="section-header">Email Marketing</p>
+                <h2 class="section-title">Launch Email Sequence</h2>
+                
+                <div class="copy-sample">
+                    <p class="copy-label">Subject Lines</p>
+                    <p><strong>A:</strong> Your body. Your rules. Our fabric.</p>
+                    <p><strong>B:</strong> We made this in your size. Promise. (Winner - 47% Open Rate)</p>
+                </div>
+                
+                <div class="copy-sample">
+                    <p class="copy-label">Email Body</p>
+                    <div class="body-copy">
+                        <p>Hi,</p>
+                        <p>Let's skip the part where we pretend one size actually fits all.</p>
+                        <p>It doesn't. It never has.</p>
+                        <p>That's why we make everything from XXS to 5X. Not as an afterthought. Not as a "extended sizes" separate section that makes you feel like an exception.</p>
+                        <p>Every size. Every shade. Every time.</p>
+                        <p>Because fitting everybody isn't a marketing promise. It's the only way we know how to work.</p>
+                        <p><a href="#" class="cta-button">SHOP YOUR FIT</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Descriptions -->
+            <div class="section">
+                <p class="section-header">Product Copy</p>
+                <h2 class="section-title">Product Descriptions</h2>
+                
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h3 class="product-name">Fits Everybody T-Shirt Bra</h3>
+                        <p class="product-price">$48</p>
+                        <p class="product-description">The bra that started a revolution. Buttery-soft fabric that molds to you, not the other way around. No underwire, no problem. Available in 30 shades because "nude" is not one color.</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Soft Lounge Long Slip Dress</h3>
+                        <p class="product-price">$88</p>
+                        <p class="product-description">For the couch. For coffee runs. For wherever you decide comfort belongs. The fabric that made everyone forget we started as shapewear. Your body temperature's new best friend.</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Sculpting Bodysuit</h3>
+                        <p class="product-price">$68</p>
+                        <p class="product-description">Support without the sacrifice. Sculpting that still lets you breathe, bend, and be. Because the best foundation is the one you forget you're wearing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="section">
+                <p class="section-header">Campaign Results</p>
+                <h2 class="section-title">The Impact</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-number">+67%</div>
+                        <div class="metric-label">New Customers</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">47%</div>
+                        <div class="metric-label">Email Open Rate</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">$3.2M</div>
+                        <div class="metric-label">Launch Day Sales</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">89%</div>
+                        <div class="metric-label">Positive Sentiment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 4: RHODE COMPLETE -->
+    <section id="rhode" style="background: #fefefe; padding: 100px 0;">
+        <div class="container">
+            <div style="text-align: center; padding: 80px 0; background: linear-gradient(to bottom, #fff 0%, #fdf8f3 100%); margin-bottom: 80px;">
+                <p style="font-size: 16px; letter-spacing: 8px; text-transform: uppercase; color: #d4a574; margin-bottom: 30px;">RHODE</p>
+                <h1 style="font-size: 64px; font-weight: 200;">Skin That Lives</h1>
+                <p style="font-size: 20px; color: #999; margin-top: 30px;">The Barrier Repair Revolution</p>
+            </div>
+
+            <!-- Campaign Strategy -->
+            <div class="section">
+                <p class="section-header">Campaign Strategy</p>
+                <h2 class="section-title">The Brief</h2>
+                
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <h3>The Challenge</h3>
+                        <p>Launch Rhode's Barrier Restore Cream in an oversaturated skincare market where every brand claims to "repair" skin. Stand out without making unrealistic promises.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>The Insight</h3>
+                        <p>Women don't want perfect skin. They want skin that can handle their actual life: the stress, the travel, the forgotten SPF, the wine, the late nights.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Target Audience</h3>
+                        <p>28-40 year old women who've tried everything. They're skeptical of skincare promises but hopeful enough to try "one more thing" if it sounds honest.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>The Strategy</h3>
+                        <p>Position skincare as life support, not life changing. We're not selling transformation, we're selling resilience. Skin that can live your life with you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifesto -->
+            <div class="section">
+                <p class="section-header">Campaign Manifesto</p>
+                <h2 class="section-title">Hero Copy</h2>
+                
+                <div class="copy-sample" style="background: linear-gradient(135deg, #fdf8f3 0%, #fff9f5 100%); border-left: 3px solid #d4a574;">
+                    <div class="hero-copy">
+                        Your skin has been through things.<br><br>
+                        
+                        The all-nighter before the presentation.<br>
+                        The crying in the Uber.<br>
+                        The forgot-to-wash-your-face nights.<br>
+                        The definitely-didn't-drink-enough-water weeks.<br><br>
+                        
+                        It doesn't need another 12-step routine.<br>
+                        It needs a reset button.<br><br>
+                        
+                        Rhode makes skincare for skin that lives.<br>
+                        Really lives.<br><br>
+                        
+                        Because the best skin isn't perfect.<br>
+                        It's resilient.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Marketing -->
+            <div class="section">
+                <p class="section-header">Email Marketing</p>
+                <h2 class="section-title">Launch Campaign</h2>
+                
+                <div class="copy-sample">
+                    <p class="copy-label">Subject Lines</p>
+                    <p><strong>A:</strong> Your skin deserves a vacation (even if you don't)</p>
+                    <p><strong>B:</strong> We made this for your actual life (Winner - 52% Open Rate)</p>
+                </div>
+                
+                <div class="copy-sample">
+                    <p class="copy-label">Email Body</p>
+                    <div class="body-copy">
+                        <p>Hi beautiful,</p>
+                        <p>Let's be honest. Your skincare routine is... optimistic.</p>
+                        <p>You buy the 10-step system. You use 3 steps. On a good day.</p>
+                        <p>We get it. Life happens. Usually all over your face.</p>
+                        <p>That's why we made the Barrier Restore Cream. One product that does the work of five. Because we know you're not actually going to use five.</p>
+                        <p>Think of it as skincare for realists. Or as we call it: skincare that actually gets used.</p>
+                        <p><a href="#" class="cta-button">SHOP THE RESET</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copy Transformation -->
+            <div class="section">
+                <p class="section-header">Copy Transformation</p>
+                <h2 class="section-title">Before & After Copy</h2>
+                
+                <div class="transformation-grid">
+                    <div class="transformation-item">
+                        <h4>Before</h4>
+                        <p>"Advanced peptide complex with ceramide technology for optimal barrier function restoration."</p>
+                    </div>
+                    <div class="transformation-item">
+                        <h4>After</h4>
+                        <p>"The cream that fixes what last night did to your face."</p>
+                    </div>
+                    <div class="transformation-item">
+                        <h4>Before</h4>
+                        <p>"Clinically proven to improve skin hydration by 87% in 4 weeks."</p>
+                    </div>
+                    <div class="transformation-item">
+                        <h4>After</h4>
+                        <p>"Makes your skin bounce back. Even from Mondays."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Descriptions -->
+            <div class="section">
+                <p class="section-header">Product Copy</p>
+                <h2 class="section-title">Product Descriptions</h2>
+                
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h3 class="product-name">Barrier Restore Cream</h3>
+                        <p class="product-price">$88</p>
+                        <p class="product-description">The overachiever of moisturizers. Repairs your barrier while you sleep through your alarm. Ceramides do the rebuilding. Peptides do the strengthening. You do the sleeping. Works harder so you don't have to.</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Glazing Milk</h3>
+                        <p class="product-price">$38</p>
+                        <p class="product-description">The 7-second glow. Not a serum, not a moisturizer, just the perfect amount of hydration for people who count "splashing water on face" as skincare. Your skin but glazed. Like a donut, but make it chic.</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Peptide Lip Treatment</h3>
+                        <p class="product-price">$18</p>
+                        <p class="product-description">For lips that have opinions. And coffee addictions. And forget to drink water. Peptides that actually work, in a formula that stays put through your third iced latte. Your lips, but softer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="section">
+                <p class="section-header">Social Media</p>
+                <h2 class="section-title">Social Campaign</h2>
+                
+                <div class="social-examples">
+                    <div class="social-post">
+                        <p class="platform">Instagram Feed</p>
+                        <p>that glow when your skincare routine is just "Rhode and hope for the best" ✨</p>
+                        <p style="color: #999; margin-top: 10px;">link in bio for skin that can handle your life</p>
+                    </div>
+                    
+                    <div class="social-post">
+                        <p class="platform">TikTok Script</p>
+                        <p>"POV: It's 2am and you're finally doing skincare"</p>
+                        <p style="margin-top: 10px;">[Shows one product]</p>
+                        <p>"That's it. That's the routine. Rhode gets it."</p>
+                    </div>
+                    
+                    <div class="social-post">
+                        <p class="platform">Instagram Stories</p>
+                        <p>Story 1: "Skin check: survived another week ✓"</p>
+                        <p>Story 2: "Thank you @rhode for understanding"</p>
+                        <p>Story 3: "What's your skin survival story?"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SMS Marketing -->
+            <div class="section">
+                <p class="section-header">SMS Marketing</p>
+                <h2 class="section-title">Text Campaign</h2>
+                
+                <div class="copy-sample">
+                    <div class="body-copy">
+                        <p><strong>Text 1:</strong> "hey gorgeous, your skin called. it wants a vacation. Rhode's here: [link]"</p>
+                        <br>
+                        <p><strong>Text 2:</strong> "remember when you said you'd start that skincare routine? we made it one step. you're welcome 💕"</p>
+                        <br>
+                        <p><strong>Text 3:</strong> "cart abandoner 👀 your skin is literally waiting for you to commit. 20% off if you do it now: [link]"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Results -->
+            <div class="section">
+                <p class="section-header">Campaign Performance</p>
+                <h2 class="section-title">Results</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-number">$2.4M</div>
+                        <div class="metric-label">First Week Sales</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">52%</div>
+                        <div class="metric-label">Email Open Rate</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">73%</div>
+                        <div class="metric-label">Repeat Purchase</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">4.2M</div>
+                        <div class="metric-label">Organic Reach</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 5: HOMMES ORO COMPLETE -->
+    <section id="hommes" style="background: #f8f6f3; padding: 100px 0;">
+        <div class="container">
+            <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f8f6f3 0%, #e8e2d5 50%, #f8f6f3 100%); margin-bottom: 80px;">
+                <div style="text-align: center;">
+                    <p style="font-size: 14px; letter-spacing: 12px; text-transform: uppercase; color: #8b7355; margin-bottom: 40px;">HOMMES ORO</p>
+                    <h1 style="font-size: 84px; font-weight: 300; background: linear-gradient(135deg, #8b7355 0%, #d4af37 50%, #8b7355 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Gold Standard</h1>
+                    <p style="font-size: 20px; color: #666; font-style: italic; margin-top: 30px;">Power whispers. Gold doesn't need to shout.</p>
+                </div>
+            </div>
+
+            <!-- Introduction -->
+            <div class="section">
+                <p class="section-header">Introduction</p>
+                <h2 class="section-title">The Vision</h2>
+                
+                <div class="body-copy">
+                    <p>HOMMES ORO entered a market dominated by two extremes: rappers' chains and wedding rings. We saw an opportunity in the space between – jewelry for men who've earned the right to wear gold but don't need to announce it.</p>
+                    <p style="margin-top: 20px;">The challenge wasn't selling jewelry. It was selling permission. Permission for successful men to invest in themselves beyond watches and cars.</p>
+                </div>
+            </div>
+
+            <!-- Strategy -->
+            <div class="section">
+                <p class="section-header">Strategic Foundation</p>
+                <h2 class="section-title">The Assignment</h2>
+                
+                <div class="brief-grid">
+                    <div class="brief-item">
+                        <h3>The Challenge</h3>
+                        <p>Break the stereotype that men's jewelry is either "rapper chains" or "wedding rings." Position HOMMES ORO as the sophisticated choice for men who understand that jewelry is power, not decoration.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>The Insight</h3>
+                        <p>Successful men wear uniforms: the same watch, the same shoes, the same confidence. They don't want jewelry that screams. They want jewelry that knows when to whisper.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Target Audience</h3>
+                        <p>35-50 year old men who've made it but don't need to prove it. They buy Porsche, not Lamborghini. They know wine, not just whiskey. First class, not private jet.</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>The Strategy</h3>
+                        <p>Position jewelry as the final detail that separates good from exceptional. Not "look at me" but "look closer." Quiet luxury for men who speak softly and carry investment portfolios.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manifesto -->
+            <div class="section" style="background: #1a1a1a; color: #f4f4f4;">
+                <p class="section-header" style="color: #d4af37;">Campaign Manifesto</p>
+                <h2 class="section-title" style="color: #f4f4f4;">The Gold Standard</h2>
+                
+                <div style="font-size: 32px; line-height: 1.8; font-weight: 300; text-align: center; max-width: 800px; margin: 0 auto;">
+                    Gold doesn't announce itself.<br>
+                    Neither do you.<br><br>
+                    
+                    In boardrooms where decisions move millions.<br>
+                    At dinners where handshakes become partnerships.<br>
+                    In moments when presence speaks louder than words.<br><br>
+                    
+                    You've learned that true power is quiet.<br>
+                    True taste is subtle.<br>
+                    True value needs no explanation.<br><br>
+                    
+                    HOMMES ORO.<br>
+                    For men who set standards.<br>
+                    Not follow them.
+                </div>
+            </div>
+
+            <!-- Evolution -->
+            <div class="section">
+                <p class="section-header">The Evolution</p>
+                <h2 class="section-title">Campaign Development</h2>
+                
+                <div class="body-copy">
+                    <p><strong>Phase 1: The Whisper Campaign</strong><br>
+                    No mass marketing. No billboards. We started with handwritten notes to 100 CEOs. The message: "Power doesn't need to shout." Each included a private viewing invitation.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Phase 2: The Boardroom Sessions</strong><br>
+                    Private showings in actual boardrooms after hours. Scotch, silence, and gold. No sales pitch. Just men who understood quality examining pieces that understood power.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Phase 3: The Organic Adoption</strong><br>
+                    When a Fortune 500 CEO wears your chain to a merger announcement, you don't need advertising. You need production capacity.</p>
+                </div>
+            </div>
+
+            <!-- Product Descriptions -->
+            <div class="section">
+                <p class="section-header">Product Collection</p>
+                <h2 class="section-title">The Pieces</h2>
+                
+                <div class="product-grid">
+                    <div class="product-card" style="background: #050505; color: #f4f4f4; border: 1px solid #1a1a1a;">
+                        <h3 class="product-name" style="color: #f4f4f4;">The Executive Chain</h3>
+                        <p class="product-price" style="color: #d4af37;">$4,800</p>
+                        <p class="product-description" style="color: #999;">3mm of presence. Not presence of mind. Presence of power. The chain that says everything by saying nothing. Worn under the shirt by men who know when to reveal their hand. 18k gold that weighs exactly what authority should.</p>
+                    </div>
+                    
+                    <div class="product-card" style="background: #050505; color: #f4f4f4; border: 1px solid #1a1a1a;">
+                        <h3 class="product-name" style="color: #f4f4f4;">The Closer Ring</h3>
+                        <p class="product-price" style="color: #d4af37;">$2,400</p>
+                        <p class="product-description" style="color: #999;">For the hand that signs the deals. Minimalist geometry that catches light at precisely the right moments. Not a statement piece. A punctuation mark. The difference between a handshake and a partnership.</p>
+                    </div>
+                    
+                    <div class="product-card" style="background: #050505; color: #f4f4f4; border: 1px solid #1a1a1a;">
+                        <h3 class="product-name" style="color: #f4f4f4;">The Founder Bracelet</h3>
+                        <p class="product-price" style="color: #d4af37;">$3,600</p>
+                        <p class="product-description" style="color: #999;">Built like your business: link by link. No logos. No flash. Just 18k gold formed into something unbreakable. For wrists that have signed their names on things that matter.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Conversation -->
+            <div class="section">
+                <p class="section-header">The Conversation</p>
+                <h2 class="section-title">Cultural Shift</h2>
+                
+                <div class="body-copy">
+                    <p>We didn't create advertising. We created conversations.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>"Why do you wear gold?"</strong><br>
+                    "The same reason I fly private. Because I've earned the right not to explain."</p>
+                    
+                    <p style="margin-top: 20px;"><strong>"Isn't jewelry for..."</strong><br>
+                    "Men who understand that power is in the details? Yes."</p>
+                    
+                    <p style="margin-top: 20px;"><strong>"What does it say about you?"</strong><br>
+                    "Nothing. That's the point."</p>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="section">
+                <p class="section-header">Campaign Performance</p>
+                <h2 class="section-title">The Results</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-number">$1.8M</div>
+                        <div class="metric-label">Q1 Revenue</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">$12K</div>
+                        <div class="metric-label">Average Order</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">43%</div>
+                        <div class="metric-label">Email Open Rate</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">67%</div>
+                        <div class="metric-label">Repeat Purchase</div>
+                    </div>
+                </div>
+                
+                <div class="brief-grid" style="margin-top: 40px;">
+                    <div class="brief-item">
+                        <h3>Business Performance</h3>
+                        <p>• 312% increase in male luxury jewelry category<br>
+                        • Average order value of $12,000 (industry avg: $3,500)<br>
+                        • 67% customers purchased multiple pieces<br>
+                        • Waitlist of 400+ for limited editions</p>
+                    </div>
+                    <div class="brief-item">
+                        <h3>Market Position</h3>
+                        <p>• Established new category: "Boardroom Jewelry"<br>
+                        • Featured in WSJ "Men's Style Evolution"<br>
+                        • Partnership inquiries from private banks<br>
+                        • Organic celebrity adoption (no paid endorsements)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 6: VALENTINO COMPLETE -->
+    <section id="valentino" style="background: #fff; padding: 100px 0;">
+        <div class="container">
+            <div style="height: 60vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, #fff 50%, #ffe4e6 50%); margin-bottom: 80px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 72px; color: #e30045; font-weight: 300; margin-bottom: 20px;">$47M</div>
+                    <div style="font-size: 24px; color: #666; font-style: italic;">in 6 weeks from 5 words</div>
+                    <p style="font-size: 14px; letter-spacing: 6px; text-transform: uppercase; margin-top: 30px;">Valentino La Vita Rosa</p>
+                </div>
+            </div>
+
+            <!-- The Story -->
+            <div class="section">
+                <div style="font-size: 180px; color: #f5dde0; font-weight: 100; line-height: 0.8; margin-bottom: 40px;">01</div>
+                <h2 style="color: #e30045; font-size: 28px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 400;">The Assignment</h2>
+                <p style="color: #999; font-size: 18px; margin-bottom: 30px;">Reintroduce Valentino to a generation that thinks luxury is streetwear</p>
+                
+                <p>The challenge arrived wrapped in Italian heritage and 60 years of haute couture history. Valentino needed to speak to women who buy Balenciaga sneakers but have never considered Roman elegance.</p>
+                <p style="margin-top: 20px;">The brief was simple: Make them care about craft again. Make them understand that some things are worth the wait. That fast fashion is the opposite of luxury, not the evolution of it.</p>
+                <p style="margin-top: 20px;"><strong>The insight that changed everything:</strong> These women don't want to buy luxury. They want to become it.</p>
+            </div>
+
+            <div class="section">
+                <div style="font-size: 180px; color: #f5dde0; font-weight: 100; line-height: 0.8; margin-bottom: 40px;">02</div>
+                <h2 style="color: #e30045; font-size: 28px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 400;">The Strategy</h2>
+                <p style="color: #999; font-size: 18px; margin-bottom: 30px;">Romance as rebellion in the age of minimalism</p>
+                
+                <div class="body-copy">
+                    <p><strong>Reframe the conversation.</strong> Stop selling products. Start selling permission. Permission to want beauty in a world that calls it shallow. Permission to choose craft in a world of copies.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>The creative strategy:</strong> La Vita Rosa - The Pink Life. Not just a color. A choice. A declaration that romance isn't dead, it's just been waiting for someone brave enough to choose it.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>The tactical approach:</strong> Five words that would appear everywhere: "Romance is not dead yet." No explanation. No context. Just permission.</p>
+                </div>
+            </div>
+
+            <!-- Language of Luxury -->
+            <div class="section">
+                <p class="section-header">Language of Luxury</p>
+                <h2 class="section-title">The Voice</h2>
+                
+                <div class="copy-sample" style="background: #1a1a1a; color: white; padding: 40px;">
+                    <p style="font-size: 24px; line-height: 1.8; text-align: center;">
+                        We don't make clothes.<br>
+                        We make moments.<br><br>
+                        
+                        The moment you realize beauty isn't shallow.<br>
+                        It's essential.<br><br>
+                        
+                        The moment you understand that choosing silk<br>
+                        is choosing to feel everything.<br><br>
+                        
+                        The moment you stop apologizing<br>
+                        for wanting what you want.<br><br>
+                        
+                        Valentino.<br>
+                        For women who choose to feel.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Manifesto -->
+            <div class="section" style="background: #1a1a1a; color: #fff;">
+                <p class="section-header" style="color: #e30045;">Campaign Manifesto</p>
+                <h2 class="section-title" style="color: white;">La Vita Rosa</h2>
+                
+                <div style="font-size: 32px; line-height: 1.6; font-weight: 300; text-align: center; max-width: 800px; margin: 0 auto;">
+                    They told you <span style="color: #e30045;">romance is dead.</span><br>
+                    That elegance is outdated.<br>
+                    That wanting beauty makes you shallow.<br><br>
+                    
+                    They lied.<br><br>
+                    
+                    Choosing silk in a world of polyester.<br>
+                    Choosing craft in a world of copies.<br>
+                    Choosing to feel everything<br>
+                    in a world that feels nothing.<br><br>
+                    
+                    This is <span style="color: #e30045;">La Vita Rosa.</span><br>
+                    This is Valentino.
+                </div>
+            </div>
+
+            <!-- The Collection Narratives -->
+            <div class="section">
+                <p class="section-header">The Collection Narratives</p>
+                <h2 class="section-title">Product Stories</h2>
+                
+                <div class="product-grid">
+                    <div class="product-card" style="background: linear-gradient(135deg, #ffe4e6 0%, #fff0f2 100%);">
+                        <h3 class="product-name">The Rosa Gown</h3>
+                        <p class="product-price" style="color: #e30045;">$8,500</p>
+                        <p class="product-description">Not a dress. A declaration. Cut from silk that took 6 months to source because some things refuse to be rushed. The gown that makes entering a room feel like opening night at La Scala.</p>
+                    </div>
+                    
+                    <div class="product-card" style="background: linear-gradient(135deg, #ffe4e6 0%, #fff0f2 100%);">
+                        <h3 class="product-name">The Rockstud Reimagined</h3>
+                        <p class="product-price" style="color: #e30045;">$1,290</p>
+                        <p class="product-description">The shoe that built an empire, rebuilt for women who build their own. Italian leather that molds to ambition. Studs that catch light like champagne bubbles. Power you can hear coming.</p>
+                    </div>
+                    
+                    <div class="product-card" style="background: linear-gradient(135deg, #ffe4e6 0%, #fff0f2 100%);">
+                        <h3 class="product-name">The Atelier Bag</h3>
+                        <p class="product-price" style="color: #e30045;">$3,200</p>
+                        <p class="product-description">Handmade by artisans who've been with Valentino longer than you've been alive. Carries secrets better than champagne. The bag that knows the difference between arriving and making an entrance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Cultural Conversation -->
+            <div class="section">
+                <p class="section-header">The Cultural Conversation</p>
+                <h2 class="section-title">The Movement</h2>
+                
+                <div class="body-copy">
+                    <p>La Vita Rosa became more than a campaign. It became permission.</p>
+                    
+                    <p style="margin-top: 20px;">Women started using #LaVitaRosa not just for fashion, but for moments of chosen beauty. A sunset. A perfect cappuccino. A Tuesday in silk. The decision to feel everything in a world that had taught them to feel less.</p>
+                    
+                    <p style="margin-top: 20px;">Fashion editors called it "The Rosa Revolution." We called it what it was: women remembering they're allowed to want beautiful things.</p>
+                    
+                    <p style="margin-top: 20px;">The five words – "Romance is not dead yet" – appeared on protest signs, in wedding vows, on museum walls. Proof that when you give women permission to feel, they change the world.</p>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="section">
+                <p class="section-header">The Rosa Revolution</p>
+                <h2 class="section-title">Campaign Impact</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-number">$47M</div>
+                        <div class="metric-label">Six Week Revenue</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">73min</div>
+                        <div class="metric-label">Complete Sellout</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">2.3M</div>
+                        <div class="metric-label">New Customers</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">847%</div>
+                        <div class="metric-label">Sentiment Increase</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 60px; padding: 40px; background: #faf9f7;">
+                    <p style="font-size: 14px; letter-spacing: 3px; color: #999;">VALENTINO LA VITA ROSA CAMPAIGN / PORTFOLIO SHOWCASE / LUXURY COPYWRITING AT ITS FINEST</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 7: QUICK HITS COMPLETE -->
+    <section id="quickhits" style="background: linear-gradient(135deg, #fdfbfb 0%, #f6f0ea 50%, #f5e6d8 100%); padding: 100px 0;">
+        <div class="container">
+            <div style="text-align: center; padding: 80px 20px; margin-bottom: 60px;">
+                <h1 style="font-size: 56px; font-weight: 200; color: #3a3a3a; margin-bottom: 20px;">Quick Hits</h1>
+                <p style="font-size: 18px; color: #8b7e74; letter-spacing: 2px;">15 PIECES OF COPY THAT CHANGED EVERYTHING</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; margin-bottom: 80px;">
+                <!-- Quick Hit 1 -->
+                <div class="hit-card">
+                    <div class="hit-number">001</div>
+                    <div class="hit-type">Email Subject Line</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "New Collection Available Now"
+                        </div>
+                        <div class="version after">
+                            "You're not ready for this"
+                        </div>
+                    </div>
+                    <span class="metric-tag">Open rate: 18% → 47%</span>
+                </div>
+                
+                <!-- Quick Hit 2 -->
+                <div class="hit-card">
+                    <div class="hit-number">002</div>
+                    <div class="hit-type">CTA Button Copy</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "Submit"
+                        </div>
+                        <div class="version after">
+                            "I'm ready"
+                        </div>
+                    </div>
+                    <span class="metric-tag">Click rate: 3% → 12%</span>
+                </div>
+                
+                <!-- Quick Hit 3 -->
+                <div class="hit-card">
+                    <div class="hit-number">003</div>
+                    <div class="hit-type">Product Description</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "100% organic cotton t-shirt with classic fit"
+                        </div>
+                        <div class="version after">
+                            "The shirt that makes strangers ask where you got it"
+                        </div>
+                    </div>
+                    <span class="metric-tag">Conversion: 2.3% → 8.7%</span>
+                </div>
+                
+                <!-- Quick Hit 4 -->
+                <div class="hit-card">
+                    <div class="hit-number">004</div>
+                    <div class="hit-type">Homepage Headline</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "Welcome to Our Store"
+                        </div>
+                        <div class="version after">
+                            "This is what confidence looks like"
+                        </div>
+                    </div>
+                    <span class="metric-tag">Bounce rate: 67% → 31%</span>
+                </div>
+                
+                <!-- Quick Hit 5 -->
+                <div class="hit-card">
+                    <div class="hit-number">005</div>
+                    <div class="hit-type">Push Notification</div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #fff9f4 0%, #fef5ed 100%); border-radius: 12px;">
+                        "Your cart misses you 💀"<br><br>
+                        <small>Sent 3 hours after abandonment</small>
+                    </div>
+                    <span class="metric-tag">34% cart recovery</span>
+                </div>
+                
+                <!-- Quick Hit 6 -->
+                <div class="hit-card">
+                    <div class="hit-number">006</div>
+                    <div class="hit-type">SMS Marketing</div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #fff9f4 0%, #fef5ed 100%); border-radius: 12px;">
+                        "psst... everyone else is asleep. first access starts now: [link]"
+                    </div>
+                    <span class="metric-tag">73% click rate at 11pm</span>
+                </div>
+                
+                <!-- Quick Hit 7 -->
+                <div class="hit-card">
+                    <div class="hit-number">007</div>
+                    <div class="hit-type">404 Error Page</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "Page not found. Return to homepage."
+                        </div>
+                        <div class="version after">
+                            "You found the secret room. Unfortunately, it's empty. Let's go somewhere better."
+                        </div>
+                    </div>
+                    <span class="metric-tag">Reduced exits by 41%</span>
+                </div>
+                
+                <!-- Quick Hit 8 -->
+                <div class="hit-card">
+                    <div class="hit-number">008</div>
+                    <div class="hit-type">Social Proof Copy</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "Join 10,000+ customers"
+                        </div>
+                        <div class="version after">
+                            "10,847 people can't all be wrong"
+                        </div>
+                    </div>
+                    <span class="metric-tag">Trust score +23%</span>
+                </div>
+                
+                <!-- Quick Hit 9 -->
+                <div class="hit-card">
+                    <div class="hit-number">009</div>
+                    <div class="hit-type">Checkout Anxiety Reducer</div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #fff9f4 0%, #fef5ed 100%); border-radius: 12px;">
+                        "No surprises. The price you see is the price you pay. Shipping included. Always."
+                    </div>
+                    <span class="metric-tag">Cart abandonment -18%</span>
+                </div>
+                
+                <!-- Quick Hit 10 -->
+                <div class="hit-card">
+                    <div class="hit-number">010</div>
+                    <div class="hit-type">Instagram Caption</div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #fff9f4 0%, #fef5ed 100%); border-radius: 12px;">
+                        "Alexa, play 'confidence boost' 🎵<br><br>
+                        Oh wait, you're already wearing it."
+                    </div>
+                    <span class="metric-tag">347% above average engagement</span>
+                </div>
+                
+                <!-- Quick Hit 11 -->
+                <div class="hit-card">
+                    <div class="hit-number">011</div>
+                    <div class="hit-type">Welcome Email Opening</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "Thank you for subscribing to our newsletter"
+                        </div>
+                        <div class="version after">
+                            "Ok, you're in. Here's what happens next."
+                        </div>
+                    </div>
+                    <span class="metric-tag">Read time +47 seconds</span>
+                </div>
+                
+                <!-- Quick Hit 12 -->
+                <div class="hit-card">
+                    <div class="hit-number">012</div>
+                    <div class="hit-type">Scarcity Copy</div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #fff9f4 0%, #fef5ed 100%); border-radius: 12px;">
+                        "We made 100. That's it. When they're gone, we're not sorry."
+                    </div>
+                    <span class="metric-tag">Sold out in 47 minutes</span>
+                </div>
+                
+                <!-- Quick Hit 13 -->
+                <div class="hit-card">
+                    <div class="hit-number">013</div>
+                    <div class="hit-type">Review Request Email</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "Please rate your recent purchase"
+                        </div>
+                        <div class="version after">
+                            "Quick question: Did we nail it or what?"
+                        </div>
+                    </div>
+                    <span class="metric-tag">Response rate: 8% → 31%</span>
+                </div>
+                
+                <!-- Quick Hit 14 -->
+                <div class="hit-card">
+                    <div class="hit-number">014</div>
+                    <div class="hit-type">Bundle Description</div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #fff9f4 0%, #fef5ed 100%); border-radius: 12px;">
+                        "The 'I have my life together' starter pack<br><br>
+                        Everything you need. Nothing you don't. One click."
+                    </div>
+                    <span class="metric-tag">Bundle adoption +67%</span>
+                </div>
+                
+                <!-- Quick Hit 15 -->
+                <div class="hit-card">
+                    <div class="hit-number">015</div>
+                    <div class="hit-type">Loyalty Program Name</div>
+                    <div class="before-after">
+                        <div class="version before">
+                            "Rewards Program"
+                        </div>
+                        <div class="version after">
+                            "The Inner Circle"
+                        </div>
+                    </div>
+                    <span class="metric-tag">Sign-ups +234%</span>
+                </div>
+            </div>
+            
+            <!-- Tones Showcase -->
+            <div style="background: rgba(255, 255, 255, 0.5); border-radius: 30px; padding: 80px 40px;">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="font-size: 36px; color: #3a3a3a; font-weight: 300; margin-bottom: 15px;">One Product, Six Voices</h2>
+                    <p style="font-size: 16px; color: #8b7e74;">Showing range with the same wool sweater</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
+                        <p style="font-size: 11px; letter-spacing: 2px; color: #c9a961; text-transform: uppercase; margin-bottom: 15px;">Playful</p>
+                        <p style="font-size: 14px; line-height: 1.6; color: #4a4a4a;">The sweater your sweater wants to be when it grows up. Ridiculously soft. Suspiciously affordable.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
+                        <p style="font-size: 11px; letter-spacing: 2px; color: #c9a961; text-transform: uppercase; margin-bottom: 15px;">Luxury</p>
+                        <p style="font-size: 14px; line-height: 1.6; color: #4a4a4a;">Mongolian cashmere meets Italian craft. The sweater that understands the difference between warm and worthy.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
+                        <p style="font-size: 11px; letter-spacing: 2px; color: #c9a961; text-transform: uppercase; margin-bottom: 15px;">Technical</p>
+                        <p style="font-size: 14px; line-height: 1.6; color: #4a4a4a;">21.5 micron fiber width. 12-gauge knit. Grade-A Mongolian cashmere. Numbers that translate to one thing: perfection.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
+                        <p style="font-size: 11px; letter-spacing: 2px; color: #c9a961; text-transform: uppercase; margin-bottom: 15px;">Emotional</p>
+                        <p style="font-size: 14px; line-height: 1.6; color: #4a4a4a;">Remember that feeling of being hugged by your favorite person? We bottled it. In sweater form.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
+                        <p style="font-size: 11px; letter-spacing: 2px; color: #c9a961; text-transform: uppercase; margin-bottom: 15px;">Urgent</p>
+                        <p style="font-size: 14px; line-height: 1.6; color: #4a4a4a;">23 left. 47 people viewing. Your size is going fast. This is your sign.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 30px; border-radius: 15px; text-align: center;">
+                        <p style="font-size: 11px; letter-spacing: 2px; color: #c9a961; text-transform: uppercase; margin-bottom: 15px;">Sustainable</p>
+                        <p style="font-size: 14px; line-height: 1.6; color: #4a4a4a;">From sheep who are literally living their best life. Carbon neutral. Conscience clear. Style uncompromised.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="background: #2c2c2c; color: white; padding: 80px 40px; text-align: center;">
+        <h2 style="font-size: 48px; margin-bottom: 20px; font-weight: 200;">Ready to Work?</h2>
+        <p style="font-size: 20px; color: #999; margin-bottom: 40px;">Let's create copy that converts</p>
+        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+            <a href="mailto:contact@jaypaytoncopy.com" class="contact-btn-primary">Get in Touch</a>
+            <a href="https://www.linkedin.com/in/jaypaytoncopy" class="contact-btn-secondary">LinkedIn</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="padding: 40px; text-align: center; background: #1a1a1a; color: #666;">
+        <p style="font-size: 12px;">© 2025 Jay Payton Copy. Words that work, results that matter.</p>
+    </footer>
+</body>
+</html>
